@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="da-DK" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Waoo TV med Ubiquiti EdgeRouter Lite &#8211; hundewadt.dk</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="hundewadt.dk &raquo; Feed" href="https://hundewadt.dk/feed" />
+<link rel="alternate" type="application/rss+xml" title="hundewadt.dk &raquo;-kommentar-feed" href="https://hundewadt.dk/comments/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/hundewadt.dk\/wp-includes\/js\/wp-emoji-release.min.js?ver=abd465c996ac9e1261154fb19da31d91"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://hundewadt.dk/wp-includes/css/dist/block-library/style.min.css?ver=abd465c996ac9e1261154fb19da31d91' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://hundewadt.dk/wp-includes/css/dist/block-library/theme.min.css?ver=abd465c996ac9e1261154fb19da31d91' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='https://hundewadt.dk/wp-content/themes/twentysixteen/genericons/genericons.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='https://hundewadt.dk/wp-content/themes/twentysixteen/style.css?ver=abd465c996ac9e1261154fb19da31d91' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='https://hundewadt.dk/wp-content/themes/twentysixteen/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://hundewadt.dk/wp-content/themes/twentysixteen/css/ie.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://hundewadt.dk/wp-content/themes/twentysixteen/css/ie8.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://hundewadt.dk/wp-content/themes/twentysixteen/css/ie7.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://hundewadt.dk/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3'></script>
+<![endif]-->
+<script type='text/javascript' src='https://hundewadt.dk/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://hundewadt.dk/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://hundewadt.dk/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hundewadt.dk/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://hundewadt.dk/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Så sandt' href='https://hundewadt.dk/articles/saa-sandt.html' />
+<link rel='next' title='IPTV info' href='https://hundewadt.dk/articles/iptv-info.html' />
+
+<link rel="canonical" href="https://hundewadt.dk/articles/waoo-tv-med-ubiquiti-edgerouter-lite.html" />
+<link rel='shortlink' href='https://hundewadt.dk/?p=1874' />
+<link rel="alternate" type="application/json+oembed" href="https://hundewadt.dk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhundewadt.dk%2Farticles%2Fwaoo-tv-med-ubiquiti-edgerouter-lite.html" />
+<link rel="alternate" type="text/xml+oembed" href="https://hundewadt.dk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhundewadt.dk%2Farticles%2Fwaoo-tv-med-ubiquiti-edgerouter-lite.html&#038;format=xml" />
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #000000; }
+</style>
+	</head>
+
+<body class="post-template-default single single-post postid-1874 single-format-standard custom-background wp-embed-responsive">
+<div id="page" class="site">
+	<div class="site-inner">
+		<a class="skip-link screen-reader-text" href="#content">Videre til indhold</a>
+
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-header-main">
+				<div class="site-branding">
+					
+											<p class="site-title"><a href="https://hundewadt.dk/" rel="home">hundewadt.dk</a></p>
+												<p class="site-description">hellere være en original end en kopi</p>
+									</div><!-- .site-branding -->
+
+									<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+					<div id="site-header-menu" class="site-header-menu">
+													<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primær menu">
+								<div class="menu-header-container"><ul id="menu-header" class="primary-menu"><li id="menu-item-4860" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4860"><a href="https://hundewadt.dk/er-dette-et-bedrag">Er dette et bedrag?</a></li>
+<li id="menu-item-4872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-4872"><a href="https://hundewadt.dk/om">Om hundewadt.dk</a></li>
+<li id="menu-item-4876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4876"><a href="https://hundewadt.dk/support">Support</a></li>
+</ul></div>							</nav><!-- .main-navigation -->
+						
+											</div><!-- .site-header-menu -->
+							</div><!-- .site-header-main -->
+
+					</header><!-- .site-header -->
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+<article id="post-1874" class="post-1874 post type-post status-publish format-standard hentry category-hardware category-netvaerk category-notater tag-edgerouter tag-fiber tag-iptv tag-lite tag-ubiquiti tag-waoo">
+	<header class="entry-header">
+		<h1 class="entry-title">Waoo TV med Ubiquiti EdgeRouter Lite</h1>	</header><!-- .entry-header -->
+
+	
+	
+	<div class="entry-content">
+		<h2>Waoo TV, Fibia, EdgeRouter Lite</h2>
+<h3>Ubiquiti EdgeRouter Lite</h3>
+<p>Denne router har 3 porte &#8211; jeg bruger en til netværk og en til TV.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="json">
+ethernet eth0 {
+    address dhcp
+    description Internet
+    duplex auto
+    firewall {
+        in {
+            name WAN_IN
+        }
+        local {
+            name WAN_LOCAL
+        }
+    }
+    speed auto
+}
+ethernet eth1 {
+    address 192.168.x.z/24
+    description Local
+    duplex auto
+    speed auto
+}
+ethernet eth2 {
+    address 192.168.y.z/24
+    description "IPTV"
+    duplex auto
+    speed auto
+}
+loopback lo {
+}
+</pre>
+<pre class="EnlighterJSRAW" data-enlighter-language="json">
+igmp-proxy {
+    interface eth0 {
+        alt-subnet 0.0.0.0/0
+        role upstream
+        threshold 1
+    }
+    interface eth2 {
+        alt-subnet 0.0.0.0/0
+        role downstream
+        threshold 1
+    }
+}
+</pre>
+<pre class="EnlighterJSRAW" data-enlighter-language="json">
+all-ping enable
+broadcast-ping disable
+group {
+    network-group waoo-multicast-1 {
+        description "Waoo multicast networks"
+        network 233.138.48.0/24
+        network 88.83.72.0/24
+        network 212.178.160.0/19
+        network 5.103.114.0/24
+    }
+}
+ipv6-receive-redirects disable
+ipv6-src-route disable
+ip-src-route disable
+log-martians enable
+name WAN_IN {
+    default-action drop
+    description "WAN to internal"
+    rule 10 {
+        action accept
+        description "Allow Waoo IPTV multicast UDP"
+        log disable
+        protocol udp
+        source {
+            group {
+                network-group waoo-multicast-1
+            }
+        }
+    }
+    rule 30 {
+        action accept
+        description "Allow established/related"
+        state {
+            established enable
+            related enable
+        }
+    }
+    rule 40 {
+        action drop
+        description "Drop invalid state"
+        state {
+            invalid enable
+        }
+    }
+}
+name WAN_LOCAL {
+     default-action drop
+    description "WAN to router"
+    rule 20 {
+        action accept
+        description "Allow IGMP"
+        log disable
+        protocol igmp
+    }
+    rule 30 {
+        action accept
+        description "Allow established/related"
+        state {
+            established enable
+            related enable
+        }
+    }
+    rule 40 {
+        action drop
+        description "Drop invalid state"
+        state {
+            invalid enable
+        }
+    }
+}
+receive-redirects disable
+send-redirects enable
+source-validation disable
+syn-cookies enable
+</pre>
+<p>Brug <code>show ip multicast mfc</code> for at finde fra hvilke netværk der skal tillades UDP trafik. Kig efter adresser i kolonnen <code>Origin</code> som ikke er lokale og ikke din WAN.</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="shell">
+$ show ip multicast mfc
+Group           Origin           In          Out                Pkts         Bytes  Wrong
+233.138.48.139  5.103.114.2      eth0        eth2                150        4.69KB      0
+233.138.48.207  88.83.72.22      eth0        eth2              45199       57.93MB      0
+233.138.48.139  88.83.72.21      eth0        eth2             218469      280.02MB      0
+</pre>
+<p>Når det virker ser det ca sådan ud</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="shell">
+$ show ip multicast interfaces
+Intf             BytesIn        PktsIn      BytesOut       PktsOut            Local
+eth0            412.39MB        321902         0.00b             0     my.public.ip
+eth1               0.00b             0         0.00b             0      my.local.ip
+eth2               0.00b             0      412.39MB        321739      my.local.tv
+</pre>
+<p>Og nu fungerer det hele tilfredsstillende<br />
+<a href="https://www.hundewadt.dk/wp-content/uploads/2017/02/internet-speed-test.png"><img src="https://www.hundewadt.dk/wp-content/uploads/2017/02/internet-speed-test.png" alt="" width="705" height="238" class="alignnone size-full wp-image-1885" /></a></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='https://secure.gravatar.com/avatar/7233e45047e8b3f929ab968a8b96e972?s=49&#038;d=blank&#038;r=g' srcset='https://secure.gravatar.com/avatar/7233e45047e8b3f929ab968a8b96e972?s=98&#038;d=blank&#038;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' /><span class="screen-reader-text">Forfatter </span> <a class="url fn n" href="https://hundewadt.dk/articles/author/fh">Frede H.</a></span></span><span class="posted-on"><span class="screen-reader-text">Udgivet  </span><a href="https://hundewadt.dk/articles/waoo-tv-med-ubiquiti-edgerouter-lite.html" rel="bookmark"><time class="entry-date published" datetime="2017-02-04T14:13:02+02:00">4. februar 2017</time><time class="updated" datetime="2019-01-20T08:48:27+02:00">20. januar 2019</time></a></span><span class="cat-links"><span class="screen-reader-text">Kategorier </span><a href="https://hundewadt.dk/articles/category/hardware" rel="category tag">Hardware</a>, <a href="https://hundewadt.dk/articles/category/netvaerk" rel="category tag">Netværk</a>, <a href="https://hundewadt.dk/articles/category/notater" rel="category tag">Notater</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="https://hundewadt.dk/articles/tag/edgerouter" rel="tag">EdgeRouter</a>, <a href="https://hundewadt.dk/articles/tag/fiber" rel="tag">fiber</a>, <a href="https://hundewadt.dk/articles/tag/iptv" rel="tag">iptv</a>, <a href="https://hundewadt.dk/articles/tag/lite" rel="tag">Lite</a>, <a href="https://hundewadt.dk/articles/tag/ubiquiti" rel="tag">Ubiquiti</a>, <a href="https://hundewadt.dk/articles/tag/waoo" rel="tag">Waoo</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-1874 -->
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Indlægsnavigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://hundewadt.dk/articles/saa-sandt.html" rel="prev"><span class="meta-nav" aria-hidden="true">Forrige</span> <span class="screen-reader-text">Forrige indlæg:</span> <span class="post-title">Så sandt</span></a></div><div class="nav-next"><a href="https://hundewadt.dk/articles/iptv-info.html" rel="next"><span class="meta-nav" aria-hidden="true">Næste</span> <span class="screen-reader-text">Næste indlæg:</span> <span class="post-title">IPTV info</span></a></div></div>
+	</nav>
+	</main><!-- .site-main -->
+
+	<aside id="content-bottom-widgets" class="content-bottom-widgets" role="complementary">
+			<div class="widget-area">
+			<section id="custom_html-6" class="widget_text widget widget_custom_html"><h2 class="widget-title">Kryptering</h2><div class="textwidget custom-html-widget"><strong>GPG fingerprint</strong>: FBC496260E75D30A<br/>
+<strong>Keybase.io</strong>: <a href="https://keybase.io/fhundewadt">fhundewadt</a></div></section>		</div><!-- .widget-area -->
+	
+	</aside><!-- .content-bottom-widgets -->
+
+</div><!-- .content-area -->
+
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="search-6" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://hundewadt.dk/">
+	<label>
+		<span class="screen-reader-text">Søg efter:</span>
+		<input type="search" class="search-field" placeholder="Søg &hellip;" value="" name="s" />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Søg</span></button>
+</form>
+</section><section id="tag_cloud-2" class="widget widget_tag_cloud"><h2 class="widget-title">Tags</h2><div class="tagcloud"><ul class='wp-tag-cloud' role='list'>
+	<li><a href="https://hundewadt.dk/articles/tag/bibel" class="tag-cloud-link tag-link-10 tag-link-position-1" style="font-size: 1em;">bibel</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/bibelen" class="tag-cloud-link tag-link-15 tag-link-position-2" style="font-size: 1em;">bibelen</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/defination" class="tag-cloud-link tag-link-252 tag-link-position-3" style="font-size: 1em;">defination</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/dennis-kristensen" class="tag-cloud-link tag-link-484 tag-link-position-4" style="font-size: 1em;">Dennis Kristensen</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/endens-tid" class="tag-cloud-link tag-link-130 tag-link-position-5" style="font-size: 1em;">endens tid</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/evolution" class="tag-cloud-link tag-link-176 tag-link-position-6" style="font-size: 1em;">evolution</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/forbud" class="tag-cloud-link tag-link-63 tag-link-position-7" style="font-size: 1em;">forbud</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/forudseende" class="tag-cloud-link tag-link-40 tag-link-position-8" style="font-size: 1em;">forudseende</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/gud" class="tag-cloud-link tag-link-11 tag-link-position-9" style="font-size: 1em;">Gud</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/guds-rige" class="tag-cloud-link tag-link-174 tag-link-position-10" style="font-size: 1em;">Guds rige</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/how-to" class="tag-cloud-link tag-link-19 tag-link-position-11" style="font-size: 1em;">HowTo</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/installation" class="tag-cloud-link tag-link-191 tag-link-position-12" style="font-size: 1em;">installation</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/iptv" class="tag-cloud-link tag-link-382 tag-link-position-13" style="font-size: 1em;">iptv</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/japan" class="tag-cloud-link tag-link-440 tag-link-position-14" style="font-size: 1em;">Japan</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/jehova" class="tag-cloud-link tag-link-13 tag-link-position-15" style="font-size: 1em;">Jehova</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/jehovas-vidner" class="tag-cloud-link tag-link-481 tag-link-position-16" style="font-size: 1em;">Jehovas Vidner</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/jesus" class="tag-cloud-link tag-link-333 tag-link-position-17" style="font-size: 1em;">Jesus</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/kasakhstan" class="tag-cloud-link tag-link-446 tag-link-position-18" style="font-size: 1em;">Kasakhstan</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/magento" class="tag-cloud-link tag-link-94 tag-link-position-19" style="font-size: 1em;">Magento</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/middelalder" class="tag-cloud-link tag-link-62 tag-link-position-20" style="font-size: 1em;">middelalder</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/nord-korea" class="tag-cloud-link tag-link-529 tag-link-position-21" style="font-size: 1em;">Nord Korea</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/ondskab" class="tag-cloud-link tag-link-34 tag-link-position-22" style="font-size: 1em;">ondskab</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/positiv" class="tag-cloud-link tag-link-266 tag-link-position-23" style="font-size: 1em;">positiv</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/religion" class="tag-cloud-link tag-link-172 tag-link-position-24" style="font-size: 1em;">religion</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/retssag" class="tag-cloud-link tag-link-421 tag-link-position-25" style="font-size: 1em;">retssag</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/rusland" class="tag-cloud-link tag-link-482 tag-link-position-26" style="font-size: 1em;">Rusland</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/sandhed" class="tag-cloud-link tag-link-148 tag-link-position-27" style="font-size: 1em;">sandhed</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/skabelsens-fotodrama" class="tag-cloud-link tag-link-435 tag-link-position-28" style="font-size: 1em;">Skabelsens Fotodrama</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/skaber" class="tag-cloud-link tag-link-12 tag-link-position-29" style="font-size: 1em;">Skaber</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/skaberen" class="tag-cloud-link tag-link-129 tag-link-position-30" style="font-size: 1em;">Skaberen</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/studium" class="tag-cloud-link tag-link-437 tag-link-position-31" style="font-size: 1em;">studium</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/tanker" class="tag-cloud-link tag-link-27 tag-link-position-32" style="font-size: 1em;">Tanker</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/teori" class="tag-cloud-link tag-link-178 tag-link-position-33" style="font-size: 1em;">teori</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/the-photodrama-of-creation" class="tag-cloud-link tag-link-436 tag-link-position-34" style="font-size: 1em;">The Photodrama of Creation</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/tidsregning" class="tag-cloud-link tag-link-207 tag-link-position-35" style="font-size: 1em;">tidsregning</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/treenighed" class="tag-cloud-link tag-link-254 tag-link-position-36" style="font-size: 1em;">treenighed</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/tro" class="tag-cloud-link tag-link-131 tag-link-position-37" style="font-size: 1em;">tro</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/tyskland" class="tag-cloud-link tag-link-442 tag-link-position-38" style="font-size: 1em;">Tyskland</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/ulykker" class="tag-cloud-link tag-link-35 tag-link-position-39" style="font-size: 1em;">ulykker</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/usa" class="tag-cloud-link tag-link-455 tag-link-position-40" style="font-size: 1em;">USA</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/videnskab" class="tag-cloud-link tag-link-251 tag-link-position-41" style="font-size: 1em;">videnskab</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/virtualbox" class="tag-cloud-link tag-link-141 tag-link-position-42" style="font-size: 1em;">VirtualBox</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/virtuel" class="tag-cloud-link tag-link-138 tag-link-position-43" style="font-size: 1em;">virtuel</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/waoo" class="tag-cloud-link tag-link-381 tag-link-position-44" style="font-size: 1em;">Waoo</a></li>
+	<li><a href="https://hundewadt.dk/articles/tag/windows" class="tag-cloud-link tag-link-83 tag-link-position-45" style="font-size: 1em;">windows</a></li>
+</ul>
+</div>
+</section>	</aside><!-- .sidebar .widget-area -->
+
+		</div><!-- .site-content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+							<nav class="main-navigation" role="navigation" aria-label="Footer, Primær menu">
+					<div class="menu-header-container"><ul id="menu-header-1" class="primary-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4860"><a href="https://hundewadt.dk/er-dette-et-bedrag">Er dette et bedrag?</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-4872"><a href="https://hundewadt.dk/om">Om hundewadt.dk</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4876"><a href="https://hundewadt.dk/support">Support</a></li>
+</ul></div>				</nav><!-- .main-navigation -->
+			
+			
+			<div class="site-info">
+								<span class="site-title"><a href="https://hundewadt.dk/" rel="home">hundewadt.dk</a></span>
+				<a class="privacy-policy-link" href="https://hundewadt.dk/privatlivspolitik">Privatlivspolitik</a><span role="separator" aria-hidden="true"></span>				<a href="https://wordpress.org/" class="imprint">
+					Drevet af WordPress				</a>
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+	</div><!-- .site-inner -->
+</div><!-- .site -->
+
+        <meta http-equiv="imagetoolbar" content="no"><!-- disable image toolbar (if any) -->
+        <script type="text/javascript">
+            /*<![CDATA[*/
+            document.oncontextmenu = function() {
+                return false;
+            };
+            document.onselectstart = function() {
+                if (event.srcElement.type != "text" && event.srcElement.type != "textarea" && event.srcElement.type != "password") {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            };
+            if (window.sidebar) {
+                document.onmousedown = function(e) {
+                    var obj = e.target;
+                    if (obj.tagName.toUpperCase() == 'SELECT'
+                            || obj.tagName.toUpperCase() == "INPUT"
+                            || obj.tagName.toUpperCase() == "TEXTAREA"
+                            || obj.tagName.toUpperCase() == "PASSWORD") {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                };
+            }
+            document.ondragstart = function() {
+                return false;
+            };
+            /*]]>*/
+        </script>
+        <script type='text/javascript' src='https://hundewadt.dk/wp-content/themes/twentysixteen/js/skip-link-focus-fix.js?ver=20160816'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"udvid undermenu","collapse":"skjul undermenu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://hundewadt.dk/wp-content/themes/twentysixteen/js/functions.js?ver=20181230'></script>
+<script type='text/javascript' src='https://hundewadt.dk/wp-includes/js/wp-embed.min.js?ver=abd465c996ac9e1261154fb19da31d91'></script>
+</body>
+</html>
